@@ -1,0 +1,27 @@
+# Allow all web crawlers access to all content
+User-agent: *
+Disallow:
+
+# Block access to specific folders
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow important directories to be crawled
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block URL parameters that don’t need to be indexed
+Disallow: /*?sessionid
+Disallow: /*?ref=
+
+# Point to the Sitemap for easier indexing
+Sitemap: https://rasdevelopment.org/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+#User-agent: Bingbot
+#Crawl-delay: 10
